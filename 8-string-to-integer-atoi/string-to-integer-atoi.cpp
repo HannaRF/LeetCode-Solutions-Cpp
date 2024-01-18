@@ -29,7 +29,7 @@ public:
         }
 
         // Convert string to integer
-        long long s_long;
+        long s_long;
         std::stringstream(s_clean) >> s_long;
 
         // Handle negative sign
