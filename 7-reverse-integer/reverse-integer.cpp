@@ -7,7 +7,6 @@ public:
 
             if (is_negative) {
                 if (x == std::numeric_limits<int>::min()) {
-                    // Special case for the minimum value
                     throw std::exception();
                 }
                 x = -x;
@@ -29,11 +28,12 @@ public:
                 x = -x;
             }
 
-            if (x < std::numeric_limits<int>::min() || x > std::numeric_limits<int>::max()) {
-                return 0;
-            } else {
-                return x;
-            }
+            // if (x < std::numeric_limits<int>::min() || x > std::numeric_limits<int>::max()) {
+            //     return 0;
+            // } else {
+            //     return x;
+            // }
+            return x;
 
         } catch (std::exception& e) {
             // Catch the exception and return 0
